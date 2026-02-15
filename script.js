@@ -1,28 +1,23 @@
-const msg = document.getElementById('msg').innerText;
+document.addEventListener('DOMContentLoaded', function() {
+    // Your code goes here
+    const msg = document.getElementById('msg');
+    const acceptBtn = document.getElementById('accept');
+    const rejectBtn = document.getElementById('reject');
 
-accept.addEventListener("click",function accept(){
-  document.getElementById('msg').innerText = 'You are now friends'
-})
+    acceptBtn.addEventListener("click", function() {
+        msg.innerText = 'You are now friends';
+        msg.style.color = "green"
+        msg.style.fontSize = '40px'
+        const deleteElement = document.querySelector('.btn');
+        deleteElement.remove();
+    });
 
-reject.addEventListener("click", function reject(){
-    document.getElementById('msg').innerText = 'The request has been rejected'
-    const deletElement = document.getElementsByClassName('btn');
-    const parentElemnet = deletElement.parentNode;
-    if(parentElemnet){
-      parentElemnet.removeChild(deletElement)
-    }
-})
-  
-
-
-
-// Select the element you want to delete
-// const elementToRemove = document.getElementById('myElement');
-
-// Get the parent element
-// const parentElement = elementToRemove.parentNode;
-
-// Check if the parent element exists before trying to remove the child
-// if (parentElement) {
-//     parentElement.removeChild(elementToRemove); // Delete the element
-// }
+    rejectBtn.addEventListener("click", function() {
+        msg.innerText = 'The request has been rejected';
+        msg.style.color = "red"
+        msg.style.fontSize = '40px'
+        msg.style.textAlign = 'center'
+        const deleteElement = document.querySelector('.btn');
+        deleteElement.remove();
+    });
+});

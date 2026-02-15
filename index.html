@@ -6,7 +6,7 @@
     <title>Friend Request</title>
     <style>
         body{
-            background-color: aqua;
+            background-color: gray;
             display: flex;
             justify-content: center;
         }
@@ -15,31 +15,36 @@
             width: 500px;
             margin-top: 150px;
             border-radius: 20px;
-            background-color: bisque;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px
+            padding: 30px
         }
 
         .container img{
             width: 60%;
             border-radius: 10px;
-            margin-bottom: 20px
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-
+        #msg{
+            font-size: 25px;
+            margin-bottom: 60px;
+        }
         .container .btn{
             display: flex;
             gap: 70px;
         }
         button{
             padding: 15px 35px;
-            background-color: violet;
+            background-color: wheat;
             border-radius: 5px;
-            color: white;
+            color: black;
             font-size: 25px;
         }
+
     </style>
 </head>
 <body>
@@ -47,8 +52,8 @@
         <div class="container">
             
                 <img src="./photos/profile pic sample.jpg" alt="">
-                <h1>Ttaku Mohashoy</h1>
-                <h3 id="msg" style="margin-bottom: 40px">This person sent you a friend request</h3>
+                <h1 style="font-size: 45px;">Ttaku Mohashoy</h1>
+                <h3 id="msg">This person sent you a friend request</h3>
                 <div class="btn">
                     <button id="accept">Accept</button>
                     <button id="reject" onclick="reject()">Reject</button>
