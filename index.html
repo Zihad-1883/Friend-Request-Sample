@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Request</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container{
+            width: 500px;
+            margin-top: 150px;
+            border-radius: 20px;
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px
+        }
+
+        .container img{
+            width: 60%;
+            border-radius: 10px;
+            margin-bottom: 20px
+        }
+
+        .container .btn{
+            display: flex;
+            gap: 70px;
+        }
+        button{
+            padding: 15px 35px;
+            background-color: violet;
+            border-radius: 5px;
+            color: white;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+  
+        <div class="container">
+            
+                <img src="./photos/profile pic sample.jpg" alt="">
+                <h1>Ttaku Mohashoy</h1>
+                <h3 id="msg" style="margin-bottom: 40px">This person sent you a friend request</h3>
+                <div class="btn">
+                    <button id="accept">Accept</button>
+                    <button id="reject" onclick="reject()">Reject</button>
+                </div>
+            
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
