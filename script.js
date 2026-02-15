@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const msg = document.getElementById('msg');
     const acceptBtn = document.getElementById('accept');
     const rejectBtn = document.getElementById('reject');
+    const btnContainer = document.getElementById('container')
 
     acceptBtn.addEventListener("click", function () {
         msg.innerText = 'You are now friends'
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const deleteElement = document.getElementById('btn');
         deleteElement.remove();
 
-        const btnContainer = document.getElementById('container')
+        
         const removeFriendButton = document.createElement('button');
         removeFriendButton.innerText = 'Remove Friend'
         btnContainer.appendChild(removeFriendButton);
@@ -33,5 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
         msg.style.textAlign = 'center'
         const deleteElement = document.getElementById('btn');
         deleteElement.remove();
+
+       
+        const addFriendButton = document.createElement('button');
+        addFriendButton.innerText = 'Send Friend Request'
+        btnContainer.appendChild(addFriendButton);
+
+            addFriendButton.addEventListener("click",function(){
+            msg.innerText = 'Friend Request Sent'
+            msg.style.color = "blue"
+            msg.style.fontSize = '40px'
+            addFriendButton.remove();
+        })
     });
 });
