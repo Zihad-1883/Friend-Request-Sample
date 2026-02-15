@@ -11,9 +11,9 @@
             justify-content: center;
         }
 
-        .container{
+        #container{
             width: 500px;
-            margin-top: 150px;
+            margin-top: 70px;
             border-radius: 20px;
             background-color: #fff;
             display: flex;
@@ -23,7 +23,7 @@
             padding: 30px
         }
 
-        .container img{
+        #container img{
             width: 60%;
             border-radius: 10px;
             margin-top: 20px;
@@ -33,7 +33,7 @@
             font-size: 25px;
             margin-bottom: 60px;
         }
-        .container .btn{
+        #container #btn{
             display: flex;
             gap: 70px;
         }
@@ -47,16 +47,17 @@
 
     </style>
 </head>
-<body>
+<body id="body">
   
-        <div class="container">
+        <div id="container">
             
                 <img src="./photos/profile pic sample.jpg" alt="">
                 <h1 style="font-size: 45px;">Ttaku Mohashoy</h1>
                 <h3 id="msg">This person sent you a friend request</h3>
-                <div class="btn">
-                    <button id="accept">Accept</button>
-                    <button id="reject" onclick="reject()">Reject</button>
+                <div id="btn">
+                    <button id="accept" >Accept</button>
+                    <button id="reject" >Reject</button>
+                    
                 </div>
             
         </div>

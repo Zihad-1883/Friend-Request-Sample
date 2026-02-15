@@ -4,20 +4,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const acceptBtn = document.getElementById('accept');
     const rejectBtn = document.getElementById('reject');
 
-    acceptBtn.addEventListener("click", function() {
-        msg.innerText = 'You are now friends';
+    acceptBtn.addEventListener("click", function () {
+        msg.innerText = 'You are now friends'
         msg.style.color = "green"
         msg.style.fontSize = '40px'
-        const deleteElement = document.querySelector('.btn');
+        const deleteElement = document.getElementById('btn');
         deleteElement.remove();
+
+        const btnContainer = document.getElementById('container')
+        const removeFriendButton = document.createElement('button');
+        removeFriendButton.innerText = 'Remove Friend'
+        btnContainer.appendChild(removeFriendButton);
+
+        removeFriendButton.addEventListener("click",function(){
+            msg.innerText = 'Removed from friend list'
+            msg.style.color = "blue"
+            msg.style.fontSize = '40px'
+            removeFriendButton.remove();
+        })
+      
+      
     });
 
-    rejectBtn.addEventListener("click", function() {
+    rejectBtn.addEventListener("click", function () {
         msg.innerText = 'The request has been rejected';
         msg.style.color = "red"
         msg.style.fontSize = '40px'
         msg.style.textAlign = 'center'
-        const deleteElement = document.querySelector('.btn');
+        const deleteElement = document.getElementById('btn');
         deleteElement.remove();
     });
 });
